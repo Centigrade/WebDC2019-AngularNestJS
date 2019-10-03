@@ -2,6 +2,7 @@
   class="companion"
   *ngFor="let companion of companions$ | async"
   (click)="openProfile(companion.id)"
+  [routerLink]="['/companion', companion.id]"
 >
   <img class="avatar" [src]="'assets/avatars/' + companion.avatar + '-avatar.png'" />
   <div class="name" [innerHTML]="companion.markdownName | markdown"></div>

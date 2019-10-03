@@ -1,0 +1,64 @@
+@import 'index';
+
+:host {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 100%;
+}
+
+.back {
+  // reset
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  // triangle
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 25px 0;
+  border-color: transparent $color-gray transparent transparent;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.companion {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background: white;
+  padding: 20px;
+  border: 2px solid $color-gray;
+  border-radius: 0 15px 15px 15px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: $font-size-small;
+
+  .name {
+    font-size: $font-size-medium;
+    margin-bottom: 10px;
+  }
+
+  .favorite-color {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .color {
+    background: red;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 15px;
+    height: $font-size-small;
+    width: $font-size-small;
+  }
+}
