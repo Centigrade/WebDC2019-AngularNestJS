@@ -50,6 +50,15 @@ export const SAMPLE_COMPANIONS_DETAILS: CompanionDetails[] = [
     characteristics: ['vain'],
     favoriteColor: '#21D977',
   },
-  { ...SAMPLE_USER, characteristics: ['well structured'], favoriteColor: '#81FFCE' },
+  {
+    ...SAMPLE_USER,
+    characteristics: [
+      'not so slim, but sporty',
+      'well organized',
+      'striving for safety',
+      'looking for a partner',
+    ],
+    favoriteColor: '#81FFCE',
+  },
   { ...SAMPLE_MATCH, characteristics: ['well structured'], favoriteColor: '#6D58DA' },
 ];
