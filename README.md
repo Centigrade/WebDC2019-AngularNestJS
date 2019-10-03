@@ -1,5 +1,12 @@
 # WebDC2019-AngularNestJS
 
+## Contents
+
+- Sample project 'ngCompanion' for Angular ❤️ NestJS session at the Web Developer Conference 2019
+  - Angular Client
+  - NestJS Backend
+- Session slides
+
 ## All-the-way: Angular ❤️ NestJS
 
 You love Angular, TypeScript, and you are fluent in building client apps? At some point, you may need to write server-side APIs. As it is natural to use the same language in the backend as in the frontend, you are likely to choose Node.js. However, when using libraries like Express or even plain Node you are often leaving known territory lacking good idioms and structural patterns.
