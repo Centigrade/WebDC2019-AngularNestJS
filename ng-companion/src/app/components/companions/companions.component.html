@@ -4,5 +4,5 @@
   (click)="openProfile(companion.id)"
 >
   <img class="avatar" [src]="'assets/avatars/' + companion.avatar + '-avatar.png'" />
-  <div class="name">{{ companion.name }}</div>
+  <div class="name" [innerHTML]="companion.markdownName | markdown"></div>
 </div>
