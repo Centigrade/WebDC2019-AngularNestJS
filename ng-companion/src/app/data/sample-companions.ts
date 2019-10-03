@@ -32,7 +32,12 @@ export const SAMPLE_COMPANIONS: Companion[] = [
 export const SAMPLE_COMPANIONS_DETAILS: CompanionDetails[] = [
   {
     ...SAMPLE_COMPANIONS[0],
-    characteristics: ['chaotic'],
+    characteristics: [
+      'quite a fast runner',
+      'little structure in life',
+      'somewhat popular',
+      'a tad messy',
+    ],
     favoriteColor: '#88E1F8',
   },
   {

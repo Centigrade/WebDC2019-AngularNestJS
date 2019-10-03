@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { CompanionsService } from 'src/app/services/companions.service';
 import { Companion } from 'src/app/types';
 @Component({
@@ -13,6 +14,8 @@ export class CompanionsComponent implements OnInit {
   constructor(private service: CompanionsService) {}
 
   ngOnInit() {
-    this.companions$ = this.service.getAll();
+    this.companions$ = this.service
+      .getAll()
+      .pipe(tap(companions => console.log(JSON.stringify(companions))));
   }
 }

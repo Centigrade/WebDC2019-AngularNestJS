@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { SAMPLE_USER } from 'src/app/data/sample-companions';
 import { CompanionsService } from 'src/app/services/companions.service';
 import { CompanionDetails } from 'src/app/types';
@@ -20,6 +20,7 @@ export class CompanionDetailComponent implements OnInit {
     this.details$ = this.route.paramMap.pipe(
       map(params => params.get('id')),
       switchMap(id => this.service.getDetails(id)),
+      tap(details => console.log(JSON.stringify(details))),
     );
   }
 
