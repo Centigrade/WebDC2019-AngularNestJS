@@ -25,6 +25,10 @@
     cursor: pointer;
     opacity: 0.8;
   }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .companion {
@@ -35,6 +39,7 @@
   padding: 20px;
   border: 2px solid $color-gray;
   border-radius: 0 15px 15px 15px;
+  position: relative;
 }
 
 .details {
@@ -66,5 +71,20 @@
     margin-left: 15px;
     height: $font-size-small;
     width: $font-size-small;
+  }
+}
+
+.contact {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

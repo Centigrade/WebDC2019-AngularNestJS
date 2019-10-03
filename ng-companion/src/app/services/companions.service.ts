@@ -14,4 +14,9 @@ export class CompanionsService {
   public getDetails(id: string): Observable<CompanionDetails> {
     return of(SAMPLE_COMPANIONS_DETAILS.find(details => details.id === id));
   }
+
+  public sayHello(myId: string, contactId: string): Observable<void> {
+    console.log(`Companion '${myId}' says hello to '${contactId}'.`);
+    return of();
+  }
 }
