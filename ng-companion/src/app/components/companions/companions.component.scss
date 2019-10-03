@@ -2,6 +2,15 @@
 
 :host {
   display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding-left: 150px;
+}
+
+.companions {
+  display: flex;
   flex-direction: row;
 }
 
