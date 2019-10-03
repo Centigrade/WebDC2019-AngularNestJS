@@ -15,8 +15,4 @@ export class CompanionsComponent implements OnInit {
   ngOnInit() {
     this.companions$ = this.service.getAll();
   }
-
-  public openProfile(id: string) {
-    console.log(`Open profile for companion ('${id}').`);
-  }
 }

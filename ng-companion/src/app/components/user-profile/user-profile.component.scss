@@ -39,9 +39,15 @@
 
 .details {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   padding: 20px;
   font-size: $font-size-small;
+
+  .title {
+    align-self: center;
+    text-decoration: underline;
+  }
 
   .name {
     font-size: $font-size-medium;
@@ -50,8 +56,8 @@
 
   ul {
     margin: 0;
-    list-style-type: square;
     margin-bottom: 5px;
+    list-style-type: square;
   }
 
   .favorite-color {

@@ -1,5 +1,5 @@
 <h1 class="title">NgCompanion ❤️</h1>
-<div class="user" (click)="openMyProfile()">
+<div class="user" [routerLink]="['/user-profile', loggedInUser.id]">
   <img class="avatar" [src]="'assets/avatars/' + loggedInUser.avatar + '-avatar.png'" />
 </div>
 <router-outlet></router-outlet>

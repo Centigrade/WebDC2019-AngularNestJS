@@ -9,8 +9,4 @@ import { Companion } from './types';
 })
 export class AppComponent {
   public loggedInUser: Companion = SAMPLE_USER;
-
-  public openMyProfile() {
-    console.log(`Open my profile ('${this.loggedInUser.id}').`);
-  }
 }

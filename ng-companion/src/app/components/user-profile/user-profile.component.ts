@@ -6,11 +6,11 @@ import { CompanionsService } from 'src/app/services/companions.service';
 import { CompanionDetails } from 'src/app/types';
 
 @Component({
-  selector: 'wdc-companion-detail',
-  templateUrl: './companion-detail.component.html',
-  styleUrls: ['./companion-detail.component.scss'],
+  selector: 'wdc-user-profile',
+  templateUrl: './user-profile.component.html',
+  styleUrls: ['./user-profile.component.scss'],
 })
-export class CompanionDetailComponent implements OnInit {
+export class UserProfileComponent implements OnInit {
   public details$: Observable<CompanionDetails>;
 
   constructor(private route: ActivatedRoute, private service: CompanionsService) {}
