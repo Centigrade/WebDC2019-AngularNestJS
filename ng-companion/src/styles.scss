@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'index';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  // Reset cursor to default everywhere (no selection of text)
+  cursor: default;
+  user-select: none;
+}
+
+body {
+  font-family: $font-family-standard;
+  font-size: $font-size-medium;
+}
+
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('/assets/fonts/IndieFlower-Regular.ttf') format('truetype');
+}

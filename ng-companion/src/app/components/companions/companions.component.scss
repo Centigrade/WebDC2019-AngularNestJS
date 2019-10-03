@@ -1,0 +1,35 @@
+@import 'index';
+
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+.companion {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+
+  &:hover {
+    cursor: pointer;
+
+    .avatar {
+      opacity: 0.8;
+    }
+
+    .name {
+      opacity: 0.5;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 7px solid white;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+
+.name {
+  align-self: center;
+}

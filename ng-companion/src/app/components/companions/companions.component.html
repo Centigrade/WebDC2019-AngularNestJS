@@ -1,1 +1,8 @@
-<p>companions works!</p>
+<div
+  class="companion"
+  *ngFor="let companion of companions$ | async"
+  (click)="openProfile(companion.id)"
+>
+  <img class="avatar" [src]="'assets/avatars/' + companion.avatar + '-avatar.png'" />
+  <div class="name">{{ companion.name }}</div>
+</div>
