@@ -8,6 +8,13 @@ body {
   // Reset cursor to default everywhere (no selection of text)
   cursor: default;
   user-select: none;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    144deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(244, 255, 225, 0.7458333675266982) 65%,
+    rgba(228, 255, 199, 0.6898109585631127) 100%
+  );
 }
 
 body {
