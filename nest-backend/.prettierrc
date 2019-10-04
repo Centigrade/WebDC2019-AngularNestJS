@@ -1,4 +1,6 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all"
+    "$schema": "http://json.schemastore.org/prettierrc",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
 }
