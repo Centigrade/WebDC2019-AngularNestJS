@@ -1,4 +1,4 @@
-import { Companion, CompanionDetails } from '@dtos/types';
+import { Companion, CompanionDetails } from '@interfaces';
 import { Controller, Get, Param } from '@nestjs/common';
 import { CompanionsService } from '../../services/companions/companions.service';
 
@@ -7,12 +7,12 @@ export class CompanionsController {
   constructor(private service: CompanionsService) {}
 
   @Get()
-  getAll(): Companion[] {
+  async getAll(): Promise<Companion[]> {
     return this.service.findAll();
   }
 
   @Get(':id')
-  getCompanionDetails(@Param('id') id: string): CompanionDetails {
+  async getCompanionDetails(@Param('id') id: string): Promise<CompanionDetails> {
     return this.service.findDetailsById(id);
   }
 }

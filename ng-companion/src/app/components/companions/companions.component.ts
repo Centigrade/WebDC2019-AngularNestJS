@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Companion } from '@dtos/types';
+import { Companion } from '@interfaces';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { CompanionsService } from '../../services/companions.service';

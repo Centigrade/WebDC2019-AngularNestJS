@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Companion, CompanionDetails } from '@dtos/types';
+import { Companion, CompanionDetails } from '@interfaces';
 import { Observable } from 'rxjs';
 
 const BASE_URL = 'http://localhost:3000';
