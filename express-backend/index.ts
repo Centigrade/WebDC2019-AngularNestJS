@@ -1,6 +1,9 @@
 import * as cors from 'cors';
 import * as express from 'express';
-import { SAMPLE_COMPANIONS as allCompanions } from './data/sample-companions';
+import {
+  SAMPLE_COMPANIONS as companionsNearYou,
+  SAMPLE_COMPANIONS_DETAILS as allCompanions,
+} from './data/sample-companions';
 
 const app = express();
 
@@ -9,10 +12,14 @@ app.use(cors());
 app.get('/companions', function(_, res) {
   // Get companions somewhere from a DB or the like.
   // Do some magic...
-  res.send(allCompanions);
+  res.send(companionsNearYou);
 });
 
-// TODO: Implement GET route for /companion/:id
+app.get('/companion/:id', function(req, res) {
+  const id = req.params['id'];
+  const details = allCompanions.find(companion => companion.id === id);
+  res.send(details);
+});
 
 // TODO: Implement POST route for /contact
 
