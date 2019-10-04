@@ -1,7 +1,10 @@
+import * as cors from 'cors';
 import * as express from 'express';
 import { SAMPLE_COMPANIONS as allCompanions } from './data/sample-companions';
 
 const app = express();
+
+app.use(cors());
 
 app.get('/companions', function(_, res) {
   // Get companions somewhere from a DB or the like.
