@@ -1,6 +1,6 @@
+import { Companion, CompanionDetails } from '@dtos/types';
 import { Controller, Get, Param } from '@nestjs/common';
-import { CompanionsService } from 'src/services/companions/companions.service';
-import { Companion, CompanionDetails } from '../../../../dtos/types';
+import { CompanionsService } from '../../services/companions/companions.service';
 
 @Controller('companions')
 export class CompanionsController {

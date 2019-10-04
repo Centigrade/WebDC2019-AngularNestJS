@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Companion } from '@dtos/types';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Companion } from '../../../../../dtos/types';
 import { CompanionsService } from '../../services/companions.service';
 @Component({
   selector: 'wdc-companions',

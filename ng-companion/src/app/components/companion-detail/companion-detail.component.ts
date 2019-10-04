@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SAMPLE_USER } from '@dtos/data/sample-companions';
+import { CompanionDetails } from '@dtos/types';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { SAMPLE_USER } from '../../../../../dtos//data/sample-companions';
-import { CompanionDetails } from '../../../../../dtos/types';
 import { CompanionsService } from '../../services/companions.service';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SAMPLE_USER } from '../../../dtos/data/sample-companions';
-import { Companion } from '../../../dtos/types';
+import { SAMPLE_USER } from '@dtos/data/sample-companions';
+import { Companion } from '@dtos/types';
 
 @Component({
   selector: 'wdc-root',
