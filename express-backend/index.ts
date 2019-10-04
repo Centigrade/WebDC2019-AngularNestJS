@@ -17,7 +17,7 @@ app.get('/companions', function(_, res) {
   res.send(companionsNearYou);
 });
 
-app.get('/companion/:id', function(req, res) {
+app.get('/companions/:id', function(req, res) {
   const id = req.params['id'];
   const details = allCompanions.find(companion => companion.id === id);
   res.send(details);

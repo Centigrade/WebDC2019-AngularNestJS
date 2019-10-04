@@ -5,7 +5,6 @@ import { Companion, CompanionDetails } from '../types';
 
 const BASE_URL = 'http://localhost:3000';
 const COMPANIONS_ROUTE = 'companions';
-const COMPANION_ROUTE = 'companion';
 const CONTACT_ROUTE = 'contact';
 
 @Injectable({
@@ -19,7 +18,7 @@ export class CompanionsService {
   }
 
   public getDetails(id: string): Observable<CompanionDetails> {
-    const url = `${BASE_URL}/${COMPANION_ROUTE}/${id}`;
+    const url = `${BASE_URL}/${COMPANIONS_ROUTE}/${id}`;
     return this.http.get<CompanionDetails>(url);
   }
 
