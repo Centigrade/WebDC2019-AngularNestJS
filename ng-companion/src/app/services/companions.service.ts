@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Companion, CompanionDetails } from '../types';
+import { Companion, CompanionDetails } from '../../../../dtos/types';
 
 const BASE_URL = 'http://localhost:3000';
 const COMPANIONS_ROUTE = 'companions';

@@ -1,11 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { CompanionsService } from 'src/services/companions/companions.service';
-import { SAMPLE_COMPANIONS_DETAILS } from '../..//data/sample-companions';
-import { Companion, CompanionDetails } from '../../types';
-
-function retrieveCompanionDetails(id: string): CompanionDetails {
-  return SAMPLE_COMPANIONS_DETAILS.find(companion => companion.id === id);
-}
+import { Companion, CompanionDetails } from '../../../../dtos/types';
 
 @Controller('companions')
 export class CompanionsController {

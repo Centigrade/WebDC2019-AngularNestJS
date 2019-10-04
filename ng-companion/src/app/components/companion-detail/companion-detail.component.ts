@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { SAMPLE_USER } from 'src/app/data/sample-companions';
-import { CompanionsService } from 'src/app/services/companions.service';
-import { CompanionDetails } from 'src/app/types';
+import { SAMPLE_USER } from '../../../../../dtos//data/sample-companions';
+import { CompanionDetails } from '../../../../../dtos/types';
+import { CompanionsService } from '../../services/companions.service';
 
 @Component({
   selector: 'wdc-companion-detail',

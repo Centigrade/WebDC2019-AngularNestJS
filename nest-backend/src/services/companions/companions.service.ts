@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import {
   SAMPLE_COMPANIONS as allCompanions,
   SAMPLE_COMPANIONS_DETAILS,
-} from '../..//data/sample-companions';
-import { Companion, CompanionDetails } from '../../types';
+} from '../../../../dtos/data/sample-companions';
+import { Companion, CompanionDetails } from '../../../../dtos/types';
 
 function retrieveCompanionDetails(id: string): CompanionDetails {
   return SAMPLE_COMPANIONS_DETAILS.find(companion => companion.id === id);
