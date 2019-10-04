@@ -25,7 +25,7 @@ describe('CompanionsService', () => {
     expect(service).toBeDefined();
   });
 
-  it('should return all companions expect myself', async () => {
+  it('should return all companions except myself', async () => {
     // Arrange.
     const myOwnId = 'angular';
     const companions: Array<Partial<CompanionDetails>> = [
