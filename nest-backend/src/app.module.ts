@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
-import { CompanionsController } from './controllers/companions/companions.controller';
-import { ContactController } from './controllers/contact/contact.controller';
-import { CompanionsService } from './services/companions/companions.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import * as dotenv from 'dotenv';
+import { CompanionsModule } from './companions/companions.module';
+
+dotenv.config();
+const user = process.env.DB_USER;
+const password = process.env.DB_PASS;
+
+const COLLECTION = 'companions';
+const CONNECTION = `mongodb+srv://${user}:${password}@ngcompanioncluster-cpxno.mongodb.net/${COLLECTION}?retryWrites=true&w=majority`;
 
 @Module({
-  imports: [],
-  controllers: [CompanionsController, ContactController],
-  providers: [CompanionsService],
+  imports: [MongooseModule.forRoot(CONNECTION), CompanionsModule],
 })
 export class AppModule {}

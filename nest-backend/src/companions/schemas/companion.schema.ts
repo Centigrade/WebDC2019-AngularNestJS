@@ -5,4 +5,6 @@ export const CompanionSchema = new mongoose.Schema({
   name: String,
   markdownName: String,
   avatar: String,
+  favoriteColor: String,
+  characteristics: [String],
 });

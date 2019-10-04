@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CompanionDetails } from '@dtos/types';
+import { CompanionDetails } from '@interfaces';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { CompanionsService } from '../../services/companions.service';

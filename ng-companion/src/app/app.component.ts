@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { SAMPLE_USER } from '@dtos/data/sample-companions';
-import { Companion } from '@dtos/types';
 
 @Component({
   selector: 'wdc-root',
@@ -8,5 +6,5 @@ import { Companion } from '@dtos/types';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public loggedInUser: Companion = SAMPLE_USER;
+  public loggedInUser = { id: 'angular', avatar: 'dragon2' };
 }
