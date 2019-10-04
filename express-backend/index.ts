@@ -1,3 +1,4 @@
+import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import * as express from 'express';
 import {
@@ -8,6 +9,7 @@ import {
 const app = express();
 
 app.use(cors());
+app.use(bodyParser());
 
 app.get('/companions', function(_, res) {
   // Get companions somewhere from a DB or the like.
@@ -21,7 +23,11 @@ app.get('/companion/:id', function(req, res) {
   res.send(details);
 });
 
-// TODO: Implement POST route for /contact
+app.post('/contact', function(req, res) {
+  const { myId, contactId } = req.body;
+  console.log(`Companion '${myId}' says hello to '${contactId}'.`);
+  res.status(200);
+});
 
 app.listen(3000, function() {
   console.log('ngCompanions backend listening on port 3000!');
