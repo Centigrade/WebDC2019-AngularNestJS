@@ -24,6 +24,9 @@ export class CompanionDetailComponent implements OnInit {
   }
 
   public sayHello(companionId: string) {
-    this.service.sayHello('angular', companionId).toPromise();
+    this.service
+      .sayHello('angular', companionId)
+      .pipe(tap(message => console.log(message)))
+      .toPromise();
   }
 }
