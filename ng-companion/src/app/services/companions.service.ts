@@ -22,10 +22,9 @@ export class CompanionsService {
     return this.http.get<CompanionDetails>(url);
   }
 
-  public sayHello(myId: string, contactId: string): Observable<void> {
+  public sayHello(myId: string, contactId: string): Observable<string> {
     const url = `${BASE_URL}/${CONTACT_ROUTE}`;
     const body = { myId, contactId };
-    console.log(`Companion '${myId}' says hello to '${contactId}'.`);
-    return this.http.post<void>(url, body);
+    return this.http.post(url, body, { responseType: 'text' });
   }
 }
