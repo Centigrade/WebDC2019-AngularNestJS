@@ -1,0 +1,23 @@
+<button class="back" routerLink=".."></button>
+<div class="companion" *ngIf="details$ | async as details">
+  <img
+    class="character"
+    height="475"
+    [src]="'assets/characters/' + details.avatar + '-character.png'"
+  />
+  <div class="details">
+    <div class="name" [innerHTML]="details.markdownName | markdown"></div>
+    <div class="characteristics">
+      Characteristics:
+      <ul>
+        <li *ngFor="let characteristic of details.characteristics">{{ characteristic }}</li>
+      </ul>
+    </div>
+    <div class="favorite-color">
+      Favorite Color:
+      <div class="color" [style.background]="details.favoriteColor"></div>
+    </div>
+  </div>
+
+  <img class="contact" height="100" src="assets/icons/wave.png" (click)="sayHello(details.id)" />
+</div>

@@ -1,0 +1,11 @@
+<div class="title">Say hello to new companions near you...</div>
+<div class="companions">
+  <div
+    class="companion"
+    *ngFor="let companion of companions$ | async"
+    [routerLink]="['/companion', companion.id]"
+  >
+    <img class="avatar" [src]="'assets/avatars/' + companion.avatar + '-avatar.png'" />
+    <div class="name" [innerHTML]="companion.markdownName | markdown"></div>
+  </div>
+</div>

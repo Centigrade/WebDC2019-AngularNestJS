@@ -1,0 +1,42 @@
+@import 'index';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  font-size: $font-size-large;
+  margin-left: 100px;
+  text-decoration: underline;
+}
+
+.user {
+  position: fixed;
+  top: -20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .avatar {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .avatar {
+      opacity: 0.8;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
