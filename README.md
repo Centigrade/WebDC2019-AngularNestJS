@@ -24,3 +24,15 @@ Created the routed Angular Client **ngCompanion** without E2E and unit testing w
 ```bash
 ng new ng-companion --minimal true --style scss --prefix wdc --routing true
 ```
+
+### Server App with Express
+
+- Move local dummy data to server
+
+### Server App with NestJS
+
+- Implement controllers, services, and modules
+- Extract common interface
+- Replace server dummy data with Atlas MongoDB access
+- Add service unit tests
+- Add swagger documentation
