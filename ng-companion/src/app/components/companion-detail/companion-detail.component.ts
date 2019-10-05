@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CompanionDetails } from '@interfaces';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { SAMPLE_USER } from 'src/app/data/sample-companions';
-import { CompanionsService } from 'src/app/services/companions.service';
-import { CompanionDetails } from 'src/app/types';
+import { CompanionsService } from '../../services/companions.service';
 
 @Component({
   selector: 'wdc-companion-detail',
@@ -25,6 +24,9 @@ export class CompanionDetailComponent implements OnInit {
   }
 
   public sayHello(companionId: string) {
-    this.service.sayHello(SAMPLE_USER.id, companionId).toPromise();
+    this.service
+      .sayHello('angular', companionId)
+      .pipe(tap(message => console.log(message)))
+      .toPromise();
   }
 }
