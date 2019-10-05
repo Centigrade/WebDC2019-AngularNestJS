@@ -7,12 +7,12 @@ export class CompanionsController {
   constructor(private service: CompanionsService) {}
 
   @Get()
-  async getAll(): Promise<Companion[]> {
+  getAll(): Companion[] {
     return this.service.findAll();
   }
 
   @Get(':id')
-  async getCompanionDetails(@Param('id') id: string): Promise<CompanionDetails> {
+  getCompanionDetails(@Param('id') id: string): CompanionDetails {
     return this.service.findDetailsById(id);
   }
 }

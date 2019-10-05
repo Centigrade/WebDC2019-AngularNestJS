@@ -1,20 +1,28 @@
 import { Companion, CompanionDetails } from '@interfaces';
+import {
+  SAMPLE_COMPANIONS as allCompanions,
+  SAMPLE_COMPANIONS_DETAILS,
+} from '@interfaces/data/sample-companions';
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 
-const FILTER_MYSELF = { id: { $ne: 'angular' } };
+function retrieveCompanionDetails(id: string): CompanionDetails {
+  return SAMPLE_COMPANIONS_DETAILS.find(companion => companion.id === id);
+}
 
 @Injectable()
 export class CompanionsService {
-  constructor(@InjectModel('Companion') private readonly companionModel: Model<CompanionDetails>) {}
+  private readonly companions = allCompanions;
 
-  async findAll(): Promise<Companion[]> {
-    return await this.companionModel.find(FILTER_MYSELF).exec();
+  findAll(): Companion[] {
+    // Get companions from a DB or something the like.
+    // Do some magic...
+    return this.companions;
   }
 
-  async findDetailsById(id: string): Promise<CompanionDetails> {
-    const companionDetails = await this.companionModel.findOne({ id }).exec();
+  findDetailsById(id: string): CompanionDetails {
+    // Get companion details from a DB or something the like.
+    const companionDetails = retrieveCompanionDetails(id);
+    // Do some magic...
     return companionDetails;
   }
 }
