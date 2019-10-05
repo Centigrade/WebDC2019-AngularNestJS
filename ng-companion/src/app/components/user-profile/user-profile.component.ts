@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CompanionDetails } from '@interfaces';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { CompanionsService } from 'src/app/services/companions.service';
-import { CompanionDetails } from 'src/app/types';
+import { CompanionsService } from '../../services/companions.service';
 
 @Component({
   selector: 'wdc-user-profile',
