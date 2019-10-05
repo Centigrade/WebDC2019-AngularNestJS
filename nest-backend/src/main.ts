@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('ngCompanion Backend')
-    .setDescription('The ngCompanion API description')
+    .setDescription('The ngCompanion API description.')
     .setVersion('1.0')
     .addTag('companions')
     .build();
