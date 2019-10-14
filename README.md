@@ -6,6 +6,7 @@
   - Angular Client
   - NestJS Backend
 - Session slides
+  - https://speakerdeck.com/mrcube42/angular-nestjs
 
 ## All-the-way: Angular ❤️ NestJS
 
@@ -14,6 +15,8 @@ You love Angular, TypeScript, and you are fluent in building client apps? At som
 Have you ever heard of NestJS? It is a framework to build efficient, reliable and scalable server-side applications. What is remarkable about it is that it uses similar concepts as Angular. You can organize your code into modules. It works with dependency injection of services into controllers (which are in a way your components for API routes) and even has a CLI to get you started quickly.
 
 We will investigate what a project structure with an Angular front- and NestJS backend could look like, we proceed to implement our first API routes and we finally conclude testing them. Since it is so easy, we will also generate a nice API documentation on-the-go and will take a peek at helpful, already built-in plugins. In the end, you should be ready to develop your full stack web application using a marriage of Angular and NestJS.
+
+---
 
 ## Steps taken
 
